@@ -45,18 +45,18 @@ export const StickyScroll = ({
     "var(--black)",
     "var(--neutral-900)",
   ];
-  const linearGradients = [
-    "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
-    "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
-    "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
+
+  // Replace linear gradients with image URLs
+  const imageUrls = [
+    "url('../../.jpg')",
+    "url('/path/to/image2.jpg')",
+    "url('/path/to/image3.jpg')",
   ];
 
-  const [backgroundGradient, setBackgroundGradient] = useState(
-    linearGradients[0]
-  );
+  const [backgroundImage, setBackgroundImage] = useState(imageUrls[0]);
 
   useEffect(() => {
-    setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
+    setBackgroundImage(imageUrls[activeCard % imageUrls.length]);
   }, [activeCard]);
 
   return (
@@ -99,9 +99,13 @@ export const StickyScroll = ({
         </div>
       </div>
       <div
-        style={{ background: backgroundGradient }}
+        style={{
+          backgroundImage: backgroundImage, // Add background image
+          backgroundSize: "cover", // Ensure the image covers the div
+          backgroundPosition: "center", // Center the image
+        }}
         className={cn(
-          "hidden lg:block h-60 w-80 rounded-md bg-white sticky top-10 overflow-hidden",
+          "hidden lg:block h-60 w-80 rounded-md sticky top-10 overflow-hidden",
           contentClassName
         )}
       >
