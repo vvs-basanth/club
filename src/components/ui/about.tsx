@@ -30,26 +30,6 @@ const content = [
       </div>
     ),
   },
-  {
-    title: "Version control",
-    description:
-      "Version control is at the core of efficient and collaborative software development. At [Your Company Name], we leverage powerful tools like Git to track changes, manage contributions, and ensure code integrity. With version control, every team member can collaborate seamlessly, experiment confidently, and revert to previous versions when necessary. It's not just about managing code—it's about creating a transparent and reliable workflow that drives innovation and keeps projects on track.",
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-        Version control
-      </div>
-    ),
-  },
-  {
-    title: "Running out of content",
-    description:
-      "Our community is at the heart of everything we do. We thrive on collaboration, support, and shared success. By bringing together diverse voices and talents, we create a space where everyone can contribute, grow, and make an impact. Whether you're a team member, user, or partner, you're part of a vibrant, inclusive network that values connection and celebrates innovation. Together, we build, learn, and succeed.",
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Running out of content
-      </div>
-    ),
-  },
 ];
 export function StickyScrollRevealDemo() {
   return (
