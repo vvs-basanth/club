@@ -24,7 +24,7 @@ export function AuroraBackgroundDemo() {
           Grow with us!
         </div>
         <button className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-white px-4 py-2">
-          <a href="/jobs">
+          <a href="https://aero-astro-club.gitbook.io/gaac-membership">
           Get Free Membership
           </a>
         </button>
