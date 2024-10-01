@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
+const flowbite = require("flowbite-react/tailwind");
 
 const addVariablesForColors = ({ addBase, theme }: any) => {
   let allColors = flattenColorPalette(theme("colors"));
@@ -14,6 +15,7 @@ const addVariablesForColors = ({ addBase, theme }: any) => {
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    flowbite.content(),
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
@@ -39,7 +41,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [addVariablesForColors], // Add the plugin to handle CSS variables for colors
+  plugins: [addVariablesForColors, flowbite.plugin(),], // Add the plugin to handle CSS variables for colors
 };
 
 export default config;

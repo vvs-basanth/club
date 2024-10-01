@@ -1,11 +1,9 @@
-import { AuroraBackgroundDemo } from "@/components/hero";
-import { StickyScrollRevealDemo } from "@/components/ui/about";
+import { TypewriterEffectSmoothDemo } from "@/components/hero";
 
 export default function Home() {
   return (
     <div>
-      <AuroraBackgroundDemo />
-      <StickyScrollRevealDemo />
+      <TypewriterEffectSmoothDemo />
     </div>
   );
 }
